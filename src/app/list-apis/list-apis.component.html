@@ -1,0 +1,9 @@
+<mat-grid-list cols="4" >
+  <mat-grid-tile class="card card-2"
+                 *ngFor="let tile of tiles"
+                 [colspan]="tile.cols"
+                 [rowspan]="tile.rows"
+                 [ngStyle]="{'cursor':'pointer'}">
+    <span routerLink="/{{tile.path}}"  matTooltip={{tile.desc}} [matTooltipPosition]="'above'">{{tile.text}}</span>
+  </mat-grid-tile>
+</mat-grid-list>
