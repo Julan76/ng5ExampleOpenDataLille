@@ -18,6 +18,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TourismService} from './services/tourism.service';
 import {LateService} from './services/late.service';
 import {LostService} from './services/lost.service';
+import { ChartModule } from 'angular-highcharts';
+
 
 
 @NgModule({
@@ -31,8 +33,7 @@ import {LostService} from './services/lost.service';
     LostComponent,
   ],
   imports: [
-    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule,HttpClientModule
-
+    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule,HttpClientModule,ChartModule
   ],
   providers: [WorkforceService,HttpClient,TourismService,LateService,LostService],
   bootstrap: [AppComponent]
