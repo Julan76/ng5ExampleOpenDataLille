@@ -34,36 +34,9 @@ export class ListApisComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDatas(path):void {
-      if(path.localeCompare("workforce")==0) {
-        this.callWorkForceApi();
-      }
-      else if(path.localeCompare("tourism")==0){
-        this.callTourismApi();
-      }
-      else if(path.localeCompare("late")==0){
-        this.callLateApi();
 
-      }
-      else if(path.localeCompare("lost")==0){
-        this.callLostApi();
 
-      }
-  }
-  callWorkForceApi():void {
-    this.workForceService.getWorkforceData()
-      .subscribe(response => console.log(response));
-  }
-  callLostApi():void {
-    this.lostService.getLostObjectData()
-      .subscribe(response => console.log(response));
-  }
-  callLateApi():void {
-    this.lateService.getLateData()
-      .subscribe(response => console.log(response));
-  }
-  callTourismApi():void {
-    this.tourismService.getTourismData()
-      .subscribe(response => console.log(response));
-  }
+
+
+
 }

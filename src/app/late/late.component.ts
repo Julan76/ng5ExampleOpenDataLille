@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LateService} from '../services/late.service';
 
 @Component({
   selector: 'app-late',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private lateService:LateService) { }
 
   ngOnInit() {
+    this.callLateApi();
   }
-
+  callLateApi():void {
+    this.lateService.getLateData()
+      .subscribe(response => console.log(response));
+  }
 }

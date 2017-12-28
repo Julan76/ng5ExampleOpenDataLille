@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TourismService} from '../services/tourism.service';
 
 @Component({
   selector: 'app-tourism',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TourismComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tourismService:TourismService) { }
 
   ngOnInit() {
+    this.callTourismApi();
   }
-
+  callTourismApi():void {
+    this.tourismService.getTourismData()
+      .subscribe(response => console.log(response));
+  }
 }

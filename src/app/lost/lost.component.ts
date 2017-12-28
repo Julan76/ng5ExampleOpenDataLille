@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LostService} from '../services/lost.service';
 
 @Component({
   selector: 'app-lost',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private lostService:LostService) { }
 
   ngOnInit() {
+  this.callLostApi();
   }
-
+  callLostApi():void {
+    this.lostService.getLostObjectData()
+      .subscribe(response => console.log(response));
+  }
 }
