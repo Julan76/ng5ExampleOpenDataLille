@@ -13,6 +13,11 @@ import { WorkforceComponent } from './workforce/workforce.component';
 import { TourismComponent } from './tourism/tourism.component';
 import { LateComponent } from './late/late.component';
 import { LostComponent } from './lost/lost.component';
+import {WorkforceService} from './services/workforce.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TourismService} from './services/tourism.service';
+import {LateService} from './services/late.service';
+import {LostService} from './services/lost.service';
 
 
 @NgModule({
@@ -26,10 +31,10 @@ import { LostComponent } from './lost/lost.component';
     LostComponent,
   ],
   imports: [
-    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule
+    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule,HttpClientModule
 
   ],
-  providers: [],
+  providers: [WorkforceService,HttpClient,TourismService,LateService,LostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
