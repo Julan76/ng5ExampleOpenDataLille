@@ -7,6 +7,10 @@ import {TourismService} from '../services/tourism.service';
   styleUrls: ['./tourism.component.css']
 })
 export class TourismComponent implements OnInit {
+   data=null;
+
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 
   constructor(private tourismService:TourismService) { }
 
@@ -15,6 +19,10 @@ export class TourismComponent implements OnInit {
   }
   callTourismApi():void {
     this.tourismService.getTourismData()
-      .subscribe(response => console.log(response));
+      .subscribe(response => {
+        this.data=response;
+          this.data=this.data.records.map(thing => thing.fields);
+        },
+        e => console.log("error while getting google map",e));
   }
 }

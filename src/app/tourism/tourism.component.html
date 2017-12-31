@@ -1,3 +1,9 @@
-<p>
-  tourism works!
-</p>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="data[0].geo_shape.coordinates[1]" [longitude]="data[0].geo_shape.coordinates[0]">
+  <agm-marker *ngFor="let coord of data"
+              [latitude]="coord.geo_shape.coordinates[1]" [longitude]="coord.geo_shape.coordinates[0]" >
+    <agm-info-window>{{coord.name}}</agm-info-window>
+  </agm-marker>
+</agm-map>

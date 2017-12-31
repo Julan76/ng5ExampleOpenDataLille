@@ -19,6 +19,10 @@ import {TourismService} from './services/tourism.service';
 import {LateService} from './services/late.service';
 import {LostService} from './services/lost.service';
 import { ChartModule } from 'angular-highcharts';
+import { AgmCoreModule } from '@agm/core';
+import { Constants } from '../../constants';
+
+
 
 
 
@@ -33,7 +37,10 @@ import { ChartModule } from 'angular-highcharts';
     LostComponent,
   ],
   imports: [
-    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule,HttpClientModule,ChartModule
+    BrowserModule,MyOwnCustomMaterialModuleModule,FormsModule, AppRoutingModule,HttpClientModule,ChartModule,
+    AgmCoreModule.forRoot({
+      apiKey: Constants.API_KEY
+    })
   ],
   providers: [WorkforceService,HttpClient,TourismService,LateService,LostService],
   bootstrap: [AppComponent]
