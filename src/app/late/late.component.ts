@@ -59,10 +59,10 @@ export class LateComponent implements OnInit {
       }
     }
 
-
     this.chart = new Chart({
       chart: {
-        type: 'spline'
+        type: 'spline',
+        zoomType: 'x'
       },
       title: {
         text: 'Indices Mensuels de retard'
@@ -70,7 +70,6 @@ export class LateComponent implements OnInit {
       credits: {
         enabled: false
       },
-
       xAxis: {
         categories: months,
       },
