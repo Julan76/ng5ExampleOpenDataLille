@@ -34,11 +34,9 @@ export class WorkforceComponent implements OnInit {
       credits: {
         enabled: false
       },
-
       xAxis: {
         categories: res.map(thing => thing.fields.nom_de_l_etablissement),
       },
-
       legend: {
         enabled: false
       },
