@@ -64,8 +64,13 @@ export class LateComponent implements OnInit {
         type: 'spline',
         zoomType: 'x'
       },
+      plotOptions: {
+        series: {
+          allowPointSelect: true
+        }
+      },
       title: {
-        text: 'Indices Mensuels de retard'
+        text: 'Indices mensuels de retard des bus'
       },
       credits: {
         enabled: false

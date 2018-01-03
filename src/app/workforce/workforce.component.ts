@@ -29,7 +29,7 @@ export class WorkforceComponent implements OnInit {
         type: 'bar'
       },
       title: {
-        text: 'Linechart'
+        text: 'Effectifs hommes et femmes sur la MEL'
       },
       credits: {
         enabled: false
