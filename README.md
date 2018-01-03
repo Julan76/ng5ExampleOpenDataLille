@@ -6,12 +6,8 @@ Data are provided by open data lille (https://opendata.lillemetropole.fr/page/ho
 
 It  was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-
-You need a google map apikey to make "tourism" view work (http://localhost:4200/tourism)
+## IMPORTANT 
+You need a google map apikey to compile successfully 
 
 https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr
 
@@ -20,3 +16,11 @@ Juste create a constants.ts file at the roots of the project and replace "your_k
 export class Constants {
   public static get API_KEY(): string { return "your_key" }
 }
+
+
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
