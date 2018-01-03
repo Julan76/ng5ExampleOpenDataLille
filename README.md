@@ -15,7 +15,7 @@ You need a google map apikey to make "tourism" view work (http://localhost:4200/
 
 https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr
 
-Juste create a constants.ts file at the roots and replace "your_key" by the right value: 
+Juste create a constants.ts file at the roots of the project and replace "your_key" by the right value: 
 
 export class Constants {
   public static get API_KEY(): string { return "your_key" }
