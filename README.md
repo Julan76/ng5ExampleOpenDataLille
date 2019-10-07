@@ -16,7 +16,7 @@ Juste create a constants.ts file at the roots of the project and replace "your_k
 export class Constants {
   public static get API_KEY(): string { return "your_key" }
 }
-```Java
+```
 
 
 ## Development server
