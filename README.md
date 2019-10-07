@@ -12,11 +12,11 @@ You need a google map apikey to compile successfully
 https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr
 
 Juste create a constants.ts file at the roots of the project and replace "your_key" by the right value: 
-
+```Java
 export class Constants {
   public static get API_KEY(): string { return "your_key" }
 }
-
+```Java
 
 
 ## Development server
